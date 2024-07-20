@@ -5,7 +5,7 @@ module "ec2_instance" {
 
   instance_type          = "t2.medium"
   ami = var.ami
-  key_name               = "shakthi-manjunathan"
+  key_name               = "key-name"
   monitoring             = true
   vpc_security_group_ids = [module.web_server_sg.security_group_id]
   subnet_id = module.vpc.public_subnets[0]
